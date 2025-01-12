@@ -22,7 +22,7 @@ services:
   - name: ollama
     executor: http
     config:
-      endpoint: "http://$$ollama_public_ip$$:11434/api/chat"
+      endpoint: "http://ollama_public_ip:11434/api/chat"
       schema: ollama-chat
 
   - name: ollama-mistral

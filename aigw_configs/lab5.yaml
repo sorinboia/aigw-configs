@@ -40,11 +40,16 @@ profiles:
           - name: language-id
 
     services:
-      - name: ollama-mistral
+      - name: ollama
+        selector:
+          operand: not 
+          tags:
+            - language:fr
+    
+      - name: ollama/mistral
         selector:
           tags:
-            - "language:fr"
-      - name: ollama
+            - language:fr
 # Here we will find all our processor configuration
 processors:
   - name: language-id
